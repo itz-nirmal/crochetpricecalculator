@@ -48,57 +48,84 @@
                 <!-- Optional Add-ons Section -->
                 <div class="form-section">
                     <h3>Optional Add-ons</h3>
-                    <div class="checkbox-group">
-                        <label class="checkbox-item">
-                            <input 
-                                type="checkbox" 
-                                name="addons" 
-                                value="2"
-                                data-name="Keychain"
-                            >
-                            <span class="checkbox-label">Keychain</span>
-                            <span class="checkbox-price">₹2</span>
-                        </label>
-                        <label class="checkbox-item">
-                            <input 
-                                type="checkbox" 
-                                name="addons" 
-                                value="2"
-                                data-name="Soft Eyes"
-                            >
-                            <span class="checkbox-label">Soft Eyes</span>
-                            <span class="checkbox-price">₹2</span>
-                        </label>
-                        <label class="checkbox-item">
-                            <input 
-                                type="checkbox" 
-                                name="addons" 
-                                value="2"
-                                data-name="Hair Clip Small"
-                            >
-                            <span class="checkbox-label">Hair Clip Small</span>
-                            <span class="checkbox-price">₹2</span>
-                        </label>
-                        <label class="checkbox-item">
-                            <input 
-                                type="checkbox" 
-                                name="addons" 
-                                value="2"
-                                data-name="Rubber Band"
-                            >
-                            <span class="checkbox-label">Rubber Band</span>
-                            <span class="checkbox-price">₹2</span>
-                        </label>
-                        <label class="checkbox-item">
-                            <input 
-                                type="checkbox" 
-                                name="addons" 
-                                value="20"
-                                data-name="Hair Clip Large"
-                            >
-                            <span class="checkbox-label">Hair Clip Large</span>
-                            <span class="checkbox-price">₹20</span>
-                        </label>
+                    <div class="addon-list">
+                        <div class="addon-item">
+                            <label class="addon-checkbox">
+                                <input type="checkbox" name="addons" value="2" data-name="Keychain">
+                                <span class="addon-name">Keychain</span>
+                            </label>
+                            <span class="addon-price">₹2</span>
+                            <div class="addon-quantity-wrapper">
+                                <label for="qty_Keychain" class="qty-label">Qty:</label>
+                                <input type="number" id="qty_Keychain" class="addon-quantity" name="quantity_Keychain" value="1" min="1" max="99">
+                            </div>
+                        </div>
+                        <div class="addon-item">
+                            <label class="addon-checkbox">
+                                <input type="checkbox" name="addons" value="2" data-name="Soft Eyes">
+                                <span class="addon-name">Soft Eyes</span>
+                            </label>
+                            <span class="addon-price">₹2</span>
+                            <div class="addon-quantity-wrapper">
+                                <label for="qty_SoftEyes" class="qty-label">Qty:</label>
+                                <input type="number" id="qty_SoftEyes" class="addon-quantity" name="quantity_SoftEyes" value="1" min="1" max="99">
+                            </div>
+                        </div>
+                        <div class="addon-item">
+                            <label class="addon-checkbox">
+                                <input type="checkbox" name="addons" value="2" data-name="Hair Clip Small">
+                                <span class="addon-name">Hair Clip Small</span>
+                            </label>
+                            <span class="addon-price">₹2</span>
+                            <div class="addon-quantity-wrapper">
+                                <label for="qty_HairClipSmall" class="qty-label">Qty:</label>
+                                <input type="number" id="qty_HairClipSmall" class="addon-quantity" name="quantity_HairClipSmall" value="1" min="1" max="99">
+                            </div>
+                        </div>
+                        <div class="addon-item">
+                            <label class="addon-checkbox">
+                                <input type="checkbox" name="addons" value="2" data-name="Rubber Band">
+                                <span class="addon-name">Rubber Band</span>
+                            </label>
+                            <span class="addon-price">₹2</span>
+                            <div class="addon-quantity-wrapper">
+                                <label for="qty_RubberBand" class="qty-label">Qty:</label>
+                                <input type="number" id="qty_RubberBand" class="addon-quantity" name="quantity_RubberBand" value="1" min="1" max="99">
+                            </div>
+                        </div>
+                        <div class="addon-item">
+                            <label class="addon-checkbox">
+                                <input type="checkbox" name="addons" value="20" data-name="Hair Clip Large">
+                                <span class="addon-name">Hair Clip Large</span>
+                            </label>
+                            <span class="addon-price">₹20</span>
+                            <div class="addon-quantity-wrapper">
+                                <label for="qty_HairClipLarge" class="qty-label">Qty:</label>
+                                <input type="number" id="qty_HairClipLarge" class="addon-quantity" name="quantity_HairClipLarge" value="1" min="1" max="99">
+                            </div>
+                        </div>
+                        <div class="addon-item">
+                            <label class="addon-checkbox">
+                                <input type="checkbox" name="addons" value="1" data-name="Flower Stand">
+                                <span class="addon-name">Flower Stand</span>
+                            </label>
+                            <span class="addon-price">₹1</span>
+                            <div class="addon-quantity-wrapper">
+                                <label for="qty_FlowerStand" class="qty-label">Qty:</label>
+                                <input type="number" id="qty_FlowerStand" class="addon-quantity" name="quantity_FlowerStand" value="1" min="1" max="99">
+                            </div>
+                        </div>
+                        <div class="addon-item">
+                            <label class="addon-checkbox">
+                                <input type="checkbox" name="addons" value="1" data-name="Flower Leaf">
+                                <span class="addon-name">Flower Leaf</span>
+                            </label>
+                            <span class="addon-price">₹1</span>
+                            <div class="addon-quantity-wrapper">
+                                <label for="qty_FlowerLeaf" class="qty-label">Qty:</label>
+                                <input type="number" id="qty_FlowerLeaf" class="addon-quantity" name="quantity_FlowerLeaf" value="1" min="1" max="99">
+                            </div>
+                        </div>
                     </div>
                 </div>
 

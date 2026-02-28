@@ -51,8 +51,15 @@ function getSelectedAddons() {
     checkboxes.forEach(checkbox => {
         const price = parseFloat(checkbox.value);
         const name = checkbox.dataset.name;
-        selectedAddons.push({ name, price });
-        addonsTotal += price;
+        
+        // Get the quantity input for this addon (sibling in the addon-item)
+        const addonItem = checkbox.closest('.addon-item');
+        const quantityInput = addonItem.querySelector('.addon-quantity');
+        const quantity = parseInt(quantityInput.value) || 1;
+        
+        const totalPrice = price * quantity;
+        selectedAddons.push({ name, price, quantity, totalPrice });
+        addonsTotal += totalPrice;
     });
 
     return { selectedAddons, addonsTotal };
@@ -171,7 +178,7 @@ function displayResults(results) {
     // Show add-ons detail if any selected
     if (results.selectedAddons.length > 0) {
         const addonsList = results.selectedAddons
-            .map(addon => `${addon.name}: ₹${addon.price}`)
+            .map(addon => `${addon.name}${addon.quantity > 1 ? ' x' + addon.quantity : ''}: ₹${addon.totalPrice}`)
             .join(', ');
         addonsDetail.textContent = addonsList;
         addonsDetail.style.display = 'block';
@@ -229,6 +236,12 @@ function resetForm() {
     const checkboxes = document.querySelectorAll('input[name="addons"]');
     checkboxes.forEach(checkbox => {
         checkbox.checked = false;
+    });
+
+    // Reset all quantity fields to 1
+    const quantityInputs = document.querySelectorAll('.addon-quantity');
+    quantityInputs.forEach(input => {
+        input.value = 1;
     });
 
     // Hide error and result

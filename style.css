@@ -138,61 +138,128 @@ input[type="number"] {
     margin-top: 4px;
 }
 
-/* Checkbox Group */
+/* Checkbox Group - Legacy (unused) */
 .checkbox-group {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
 }
 
-.checkbox-item {
+/* Add-on List - New Structure */
+.addon-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.addon-item {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    padding: 10px 12px;
+    justify-content: space-between;
+    padding: 10px 14px;
     background: #FFD786;
     border-radius: 8px;
+    gap: 12px;
+}
+
+.addon-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     cursor: pointer;
-    transition: background-color 0.2s ease;
-    min-width: calc(50% - 5px);
-    box-sizing: border-box;
+    flex: 1;
+    min-width: 0;
 }
 
-.checkbox-item:hover {
-    background: #eaefef;
-}
-
-.checkbox-item input[type="checkbox"] {
+.addon-checkbox input[type="checkbox"] {
     width: 18px;
     height: 18px;
-    margin-right: 8px;
-    margin-left: 4px;
     cursor: pointer;
     accent-color: #00a000;
     flex-shrink: 0;
 }
 
-.checkbox-label {
-    flex-grow: 1;
+.addon-name {
     font-size: 14px;
     color: #25343f;
     white-space: nowrap;
-    line-height: 18px;
-    height: 18px;
-    display: flex;
-    align-items: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.checkbox-price {
+.addon-price {
     font-size: 14px;
     font-weight: 600;
     color: #25343f;
-    margin-left: auto;
-    padding-left: 8px;
-    line-height: 18px;
-    height: 18px;
+    flex-shrink: 0;
+}
+
+.addon-quantity-wrapper {
     display: flex;
     align-items: center;
+    gap: 6px;
+    flex-shrink: 0;
+}
+
+.qty-label {
+    font-size: 13px;
+    color: #25343f;
+    white-space: nowrap;
+}
+
+.addon-quantity {
+    width: 60px;
+    height: 32px;
+    padding: 4px 8px;
+    font-size: 14px;
+    border: 1px solid #25343f;
+    border-radius: 6px;
+    background: #fff;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.addon-quantity:focus {
+    outline: none;
+    border-color: #BF092F;
+}
+
+/* Remove spinner arrows from quantity inputs */
+.addon-quantity::-webkit-inner-spin-button,
+.addon-quantity::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.addon-quantity {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+    .addon-item {
+        padding: 8px 10px;
+        gap: 8px;
+    }
+    
+    .addon-name {
+        font-size: 13px;
+    }
+    
+    .addon-price {
+        font-size: 13px;
+    }
+    
+    .addon-quantity {
+        width: 50px;
+        height: 28px;
+        font-size: 13px;
+    }
+    
+    .qty-label {
+        display: none;
+    }
 }
 
 /* Buttons */
