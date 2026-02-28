@@ -150,6 +150,28 @@ input[type="number"] {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    max-height: 280px;
+    overflow-y: auto;
+    padding-right: 8px;
+}
+
+/* Custom Scrollbar */
+.addon-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.addon-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+.addon-list::-webkit-scrollbar-thumb {
+    background: #25343f;
+    border-radius: 3px;
+}
+
+.addon-list::-webkit-scrollbar-thumb:hover {
+    background: #1a252e;
 }
 
 .addon-item {
