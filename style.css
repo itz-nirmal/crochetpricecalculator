@@ -1,0 +1,355 @@
+/* ===================================
+   Crochet Price Calculator - Styles
+   =================================== */
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #F5E7C6;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: #25343f;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Calculator Card */
+.calculator-card {
+    background: #F9DFDF;
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 8px 32px rgba(37, 52, 63, 0.15);
+}
+
+/* Header */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+
+.calculator-card h1 {
+    font-size: 24px;
+    color: #25343f;
+    margin: 0;
+    vertical-align: middle;
+    line-height: 1;
+    text-align: center;
+}
+
+.subtitle {
+    text-align: center;
+    color: #BF092F;
+    font-size: 14px;
+    margin-top: 16px;
+    margin-bottom: 24px;
+}
+
+/* Form Sections */
+.form-section {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #25343f;
+}
+
+.form-section:last-of-type {
+    border-bottom: none;
+}
+
+.form-section h3 {
+    font-size: 16px;
+    color: #25343f;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group:last-child {
+    margin-bottom: 0;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #25343f;
+    margin-bottom: 6px;
+}
+
+.required {
+    color: #d32f2f;
+}
+
+/* Input Fields */
+input[type="number"] {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 14px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input[type="number"]:focus {
+    border-color: #25343f;
+}
+
+input[type="number"]::placeholder {
+    color: #999;
+}
+
+/* Remove spinner arrows from number inputs */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+.help-text {
+    display: block;
+    font-size: 12px;
+    color: #BF092F;
+    margin-top: 4px;
+}
+
+/* Checkbox Group */
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 12px;
+    background: #FFD786;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    min-width: calc(50% - 5px);
+    box-sizing: border-box;
+}
+
+.checkbox-item:hover {
+    background: #eaefef;
+}
+
+.checkbox-item input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+    margin-left: 4px;
+    cursor: pointer;
+    accent-color: #00a000;
+    flex-shrink: 0;
+}
+
+.checkbox-label {
+    flex-grow: 1;
+    font-size: 14px;
+    color: #25343f;
+    white-space: nowrap;
+    line-height: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-price {
+    font-size: 14px;
+    font-weight: 600;
+    color: #25343f;
+    margin-left: auto;
+    padding-left: 8px;
+    line-height: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+}
+
+/* Buttons */
+.button-group {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.btn {
+    flex: 1;
+    padding: 14px 24px;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: #25343f;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #1a252e;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 52, 63, 0.3);
+}
+
+.btn-secondary {
+    background: #eaefef;
+    color: #25343f;
+}
+
+.btn-secondary:hover {
+    background: #bfc9d1;
+    transform: translateY(-2px);
+}
+
+/* Error Message */
+.error-message {
+    margin-top: 16px;
+    padding: 12px;
+    background: #ffebee;
+    color: #c62828;
+    border-radius: 8px;
+    font-size: 14px;
+    text-align: center;
+    display: none;
+}
+
+.error-message.show {
+    display: block;
+}
+
+/* Result Section */
+.result-section {
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 2px solid #25343f;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.result-section.show {
+    display: block;
+}
+
+.result-section.fade-in {
+    opacity: 1;
+}
+
+.result-section h2 {
+    font-size: 18px;
+    color: #850E35;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.result-content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background: #850E35;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.result-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.result-label {
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.result-value {
+    font-size: 14px;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.result-detail {
+    padding-left: 16px;
+    font-size: 13px;
+    color: #FFC50F;
+}
+
+.result-divider {
+    height: 1px;
+    background: #25343f;
+    margin: 4px 0;
+}
+
+.result-row.subtotal .result-label,
+.result-row.subtotal .result-value {
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.result-row.final-price .result-label {
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.result-row.final-price .result-value {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .calculator-card {
+        padding: 24px 20px;
+    }
+
+    .calculator-card h1 {
+        font-size: 20px;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    .checkbox-group {
+        gap: 8px;
+    }
+
+    .checkbox-item {
+        padding: 8px 10px;
+    }
+}
